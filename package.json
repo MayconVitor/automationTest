@@ -4,7 +4,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report",
+    "generate:evidence": "node utils/generate-evidence.js",
+    "test:full": "playwright test && node utils/generate-evidence.js"
   },
   "keywords": [],
   "author": "",
